@@ -42,4 +42,4 @@ app.get("*", (req: Request, res: Response) => {
 
 app.listen(7000, () =>{
     console.log("server running on localhost:7000");
-})
+});
