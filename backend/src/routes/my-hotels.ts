@@ -1,10 +1,11 @@
 import express, {Request, Response} from "express";
 import multer from 'multer';
 import cloudinary from "cloudinary";
-import Hotel, { HotelType } from "../models/hotel";
+import Hotel from "../models/hotel";
 import { verify } from "crypto";
 import verifyToken from "../middleware/auth";
 import { body } from "express-validator";
+import { HotelType } from "../shared/types";
 
 const router = express.Router();
 
@@ -44,7 +45,7 @@ router.post(
             //1. upload the images to cloudinary
             const imageUrls = await uploadImages(imageFiles);
             newHotel.imageUrls = imageUrls;
-            newHotel.lastUpdate = new Date();
+            newHotel.lastUpdated = new Date();
             newHotel.userId = req.userId;
 
             //3. save the new hotel in our database
@@ -86,7 +87,7 @@ router.get("/:id", verifyToken, async (req: Request, res: Response) => {
 router.put("/:hotelId", verifyToken, upload.array("imageFiles"), async (req: Request, res:Response) => {
     try {
         const updatedHotel: HotelType = req.body;
-        updatedHotel.lastUpdate = new Date();
+        updatedHotel.lastUpdated = new Date();
 
         const hotel = await Hotel.findOneAndUpdate({
             _id: req.params.hotelId,

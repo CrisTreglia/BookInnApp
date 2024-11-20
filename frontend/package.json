@@ -13,6 +13,7 @@
     "@types/react-router-dom": "^5.3.3",
     "bsmap": "^2.1.7",
     "react": "^18.3.1",
+    "react-datepicker": "^7.5.0",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.52.1",
     "react-icons": "^5.3.0",
