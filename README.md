@@ -2,6 +2,8 @@
 
 The **BookInn App** is a hotel booking platform created to simplify the process of finding and reserving accommodations. Built using the MERN stack (MongoDB, Express.js, React, Node.js), this project aims to provide a seamless booking experience while utilizing modern web technologies and third-party integrations for efficient payment and image management.
 
+To access the web application use the following link: https://bookinnapp.onrender.com/
+
 ## About the Project
 The **BookInn App** was developed as a final project for our group at the Software Development Diploma at **Red Deer Polytechnic**. This project was collaboratively built by **Cristofer Treglia**, **Carson Pho**, **Douglas Spicer**, and **Pablo Madera**. The aim was to create a functional, full-stack application that mimics the capabilities of popular hotel booking platforms like Booking.com. Users are able to browse hotel listings, register or log in, make secure bookings, and manage their reservations, all within an intuitive and responsive user interface.
 
