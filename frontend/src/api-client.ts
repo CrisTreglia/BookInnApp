@@ -231,6 +231,7 @@ export const createRoomBooking = async (formData: BookingFormData) => {
   );
 
   if (!response.ok) {
+    console.error(await response.json());
     throw new Error("Error booking room");
   }
 };
